@@ -6,4 +6,10 @@ const StudentSchema = new Schema({
     Grade: String,
 });
 
-const student = mongoose.model('student', StudentSchema);
+
+
+const Student = mongoose.model( 'Student', StudentSchema, 'studentscollection');
+
+Student.createIndexes();
+
+module.exports = Student;

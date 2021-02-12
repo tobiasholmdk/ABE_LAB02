@@ -3,7 +3,7 @@ var mongoose = require( 'mongoose' );
 const url =
   "mongodb+srv://dbuser:Holmdk009@cluster0.qegoz.mongodb.net/Mongotest?retryWrites=true&w=majority";
 
-async function main() {
+  module.exports = async function main() {
     try {
         await mongoose.connect(url, {
             useNewUrlParser: true,
@@ -39,5 +39,3 @@ const gracefulShutdown = (msg, callback) => {
       callback();
     });
   };
-
-module.exports = mongoose;

@@ -1,4 +1,4 @@
-const students = [];
+
 var student = require ('../models/studentmodel');
 
 
@@ -7,11 +7,9 @@ var student = require ('../models/studentmodel');
 
 
 /* POST add student form */
-exports.addStudent = function (req, res) {
-   async function create()
-   {
-        var result = student.create({name: req.body.name, grade: req.body.grade})
-        result.status(200);
-        result.json(student);
-   }
+exports.addStudent =  async function (req, res) {
+        var result = await student.create({name: req.body.name, grade: req.body.grade})
+        res.status(200);
+        res.json(result);
+
 };
