@@ -34,7 +34,7 @@ async function run() {
     const collection = db.collection('students');
 
     let result = await collection.insertMany(students);
-    
+
     console.log(result);
 
   } finally {
